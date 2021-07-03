@@ -1,0 +1,14 @@
+{
+	"type": "origins:modify_projectile_damage",
+	"damage_condition": {
+		"type": "origins:projectile",
+		"projectile": "minecraft:arrow"
+	},
+	"modifier": {
+		"operation": "addition",
+		"value": 4.0,
+		"name": "more arrow damage"
+	},
+	"name": "Master Archer",
+	"description": "You deal extra damage with a bow."
+}

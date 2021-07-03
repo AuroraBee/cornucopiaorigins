@@ -1,0 +1,24 @@
+{
+  "name": "Join Wither",
+  "hidden": true,
+  "type": "origins:action_over_time",
+  "interval": 20,
+  "entity_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type":"origins:execute_command",
+        "command": "team add Wither",
+        "permission_level": 4
+      }, {
+        "type":"origins:execute_command",
+        "command": "team join Wither @p",
+        "permission_level": 4
+      }, {
+        "type": "origins:execute_command",
+        "command": "team join Wither @e[type=minecraft:wither_skeleton]",
+        "permission_level": 4
+      }
+    ]
+  }
+}

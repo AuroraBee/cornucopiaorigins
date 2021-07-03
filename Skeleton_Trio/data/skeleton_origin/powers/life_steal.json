@@ -1,0 +1,14 @@
+{
+  "type": "origins:self_action_on_hit",
+  "entity_action": {
+	"type": "origins:chance",
+	"action": {
+    		"type": "origins:heal",
+   		"amount": 4.0
+	},
+	"chance": 0.5
+  },
+  "cooldown": 60,
+  "name": "Life Steal",
+  "description": "Due to your undead nature sometimes to manage to steal the lifeforce of others."
+}

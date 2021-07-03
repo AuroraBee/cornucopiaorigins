@@ -1,0 +1,42 @@
+{
+	"powers": [
+		"skeleton_origin:starting_items",
+		"skeleton_origin:archer",
+		"skeleton_origin:spawn_in_mineshaft",
+		"skeleton_origin:underground",
+		"skeleton_origin:volley",
+		"skeleton_origin:skeleton_primary",
+		"skeleton_origin:fire_hurts",
+		"skeleton_origin:sounds",
+		"skeleton_origin:create_arrow",
+		"skeleton_origin:join_skeleton",
+		"skeleton_origin:life_steal",
+		"skeleton_origin:no_food",
+		"skeleton_origin:skeletal_skin",
+		"skeleton_origin:undead",
+		"skeleton_origin:undead_lungs",
+		"skeleton_origin:undead_vigor",
+		"skeleton_origin:weapons_limit",
+		"skeleton_origin:hostile",
+		"skeleton_origin:wolf_angry",
+		"skeleton_origin:slower_regen",
+		"skeleton_origin:reset"
+	],
+	"icon": "minecraft:bow",
+	"order": 10,
+	"impact": 3,
+	"name": "Skeleton",
+	"description": "You are a Skeleton! \nSunlight blinds and burns you!",
+	"upgrades": [
+		{
+			"condition": "skeleton_origin:root",
+			"origin": "skeleton_origin:stray",
+			"announcement": "You feel your bones freezing... \nYou might want to stay in the snow..."
+		},
+		{
+			"condition": "skeleton_origin:burned",
+			"origin": "skeleton_origin:wither",
+			"announcement": "You feel your bones start to burn... \nYou feel yourself become stronger..."
+		}
+	]
+}

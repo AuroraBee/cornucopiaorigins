@@ -1,0 +1,28 @@
+{
+    "type": "origins:active_self",
+    "name": "Camoflague",
+    "description": "PRIMARY: Become Invisible for 15 Seconds, but be slower for 25 Seconds.",
+    "hidden": false,
+    "cooldown": 1200,
+    "entity_action":
+    {
+        "type": "origins:and",
+        "actions": [
+            {
+				"type": "origins:execute_command",
+				"command": "effect give @s minecraft:invisibility 15 0 true"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "effect give @s minecraft:slowness 25 2 true"
+			}
+        ]
+    },
+    "hud_render":
+    {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+        "bar_index": 12
+    },
+    "key": "key.origins.primary_active"
+}

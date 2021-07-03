@@ -1,0 +1,30 @@
+{
+   "type":"origins:multiple",
+   "invisible":{
+      "type":"origins:invisibility",
+      "render_armor":false,
+      "condition":{
+         "type":"origins:and",
+         "conditions":[
+            {
+               "type":"origins:brightness",
+               "comparison":"<",
+               "compare_to":0.3
+            }
+         ]
+      }
+   },
+   "smoke":{
+      "type":"origins:particle",
+      "particle":"minecraft:smoke",
+      "frequency":10,
+      "condition":
+         {
+            "type":"origins:brightness",
+            "comparison":">",
+            "compare_to":0.7
+         }
+   },
+   "name":"Shadows",
+   "description":"Due to your dark nature, while underneath something or at night while sneaking, you are completely invisible."
+}

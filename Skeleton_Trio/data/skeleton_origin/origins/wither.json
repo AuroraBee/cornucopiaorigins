@@ -1,0 +1,48 @@
+{
+	"powers": [
+		"skeleton_origin:sounds_wither",
+		"skeleton_origin:need_for_light",
+		"skeleton_origin:need_for_warmth",
+		"skeleton_origin:bad_archer",
+		"skeleton_origin:withering",
+		"skeleton_origin:weapons_buff",
+		"skeleton_origin:sturdy",
+		"origins:hydrophobia",
+		"origins:fire_immunity",
+		"origins:burning_wrath",
+		"skeleton_origin:volley_wither",
+		"skeleton_origin:withering_aura",
+		"skeleton_origin:wither_immunity",
+		"skeleton_origin:spawn_in_fortress",
+		"skeleton_origin:join_wither",
+		"skeleton_origin:no_food",
+		"skeleton_origin:withered_skin",
+		"skeleton_origin:undead",
+		"skeleton_origin:undead_lungs",
+		"skeleton_origin:undead_vigor",
+		"skeleton_origin:hostile",
+		"skeleton_origin:wolf_angry",
+		"skeleton_origin:slower_regen",
+		"skeleton_origin:armor",
+		"skeleton_origin:tough_bones",
+		"skeleton_origin:reset"
+	],
+	"icon": "minecraft:wither_skeleton_skull",
+	"order": 10,
+	"impact": 3,
+	"unchoosable": true,
+	"name": "Wither Skeleton",
+	"description": "You were a skeleton, but fell into lava! Stay in the light and out of the cold!",
+	"upgrades": [
+		{
+			"condition": "skeleton_origin:root",
+			"origin": "skeleton_origin:stray",
+			"announcement": "You feel your bones freezing... \nYou might want to stay in the snow..."
+		},
+		{
+			"condition": "skeleton_origin:cooled",
+			"origin": "skeleton_origin:skeleton",
+			"announcement": "You feel your bones cooling... \nYou feel... normal again..."
+		}
+	]
+}

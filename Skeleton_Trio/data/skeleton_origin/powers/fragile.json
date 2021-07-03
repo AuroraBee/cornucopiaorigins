@@ -1,0 +1,11 @@
+{
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "Fragile health reduction",
+    "attribute": "minecraft:generic.max_health",
+    "value": -6.0,
+    "operation": "addition"
+  },
+  "name": "Brittle Bones",
+  "description": "Your undead nature leave you weaker, you have less health."
+}

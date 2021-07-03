@@ -1,0 +1,14 @@
+{
+	"type": "origins:modify_projectile_damage",
+	"damage_condition": {
+		"type": "origins:projectile",
+		"projectile": "minecraft:arrow"
+	},
+	"modifier": {
+		"operation": "addition",
+		"value": -4.0,
+		"name": "less arrow damage"
+	},
+	"name": "Bad Archer",
+	"description": "You deal less damage with a bow."
+}

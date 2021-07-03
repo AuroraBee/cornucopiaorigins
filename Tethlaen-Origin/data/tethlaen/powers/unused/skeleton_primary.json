@@ -1,0 +1,32 @@
+{
+    "type": "origins:active_self",
+    "name": "Rising Bones",
+    "description": "Summon Fangs to harm your enemies. SECONDARY",
+    "hidden": false,
+    "cooldown": 350,
+    "entity_action":
+    {
+        "type": "origins:and",
+        "actions": [
+            {
+				"type": "origins:execute_command",
+				"command": "execute at @e[distance=0.5..10,type=!item,type=!falling_block,type=!arrow,type=!spectral_arrow,type=!bat,type=!bee] run summon evoker_fangs ~ ~ ~ {Warmup:-2}"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute at @e[distance=0.5..10,type=!item,type=!falling_block,type=!arrow,type=!spectral_arrow,type=!bat,type=!bee] run summon evoker_fangs ~ ~ ~ {Warmup:-5}"
+			}
+        ]
+    },
+	"condition": {
+		"type": "origins:sneaking",
+		"inverted": true
+	},
+    "hud_render":
+    {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+        "bar_index": 22
+    },
+    "key": "key.origins.secondary_active"
+}

@@ -1,0 +1,36 @@
+{
+	"type": "origins:modify_damage_dealt",
+	"modifier": {
+        "attribute": "minecraft:generic.attack_speed",
+        "operation": "multiply_total",
+        "value": -0.5
+    },
+	"condition": {
+		"type": "origins:or",
+		"conditions": [
+			{
+				"type": "origins:equipped_item",
+				"equipment_slot": "mainhand",
+				"item_condition": {
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "tundra:melee"
+					}
+				}
+			},
+			{
+				"type": "origins:equipped_item",
+				"equipment_slot": "offhand",
+				"item_condition": {
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "tundra:melee"
+					}
+				}
+			}
+		]	
+	},
+	"name": "Archer's Curse",
+	"description": "Swords and Axes just aren't for you."
+}
+

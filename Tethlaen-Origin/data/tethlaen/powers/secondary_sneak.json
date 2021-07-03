@@ -1,0 +1,19 @@
+{
+	"type": "origins:active_self",
+	"name": "Mass Extinction",
+	"description": "Everything in a large radius around you very suddenly explodes! - Secondary + Shift",
+	"cooldown": 10000,
+	"entity_action": {
+		"type": "origins:execute_command",
+		"command": "execute at @e[type=!item,type=!player,distance=5..64] run summon fireball ~ ~ ~ {ExplosionPower:4,Motion:[0.1,-5.0,0.0],Power:[-0.1,-5.0,0.0]}"
+	},
+	"condition": {
+		"type": "origins:sneaking"
+	},
+	"key": {"key": "key.origins.secondary_active"},
+	"hud_render": {
+        "should_render": true,
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+        "bar_index": 6
+    }
+}

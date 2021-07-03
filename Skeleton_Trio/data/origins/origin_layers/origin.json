@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "origins": [
+    "skeleton_origin:skeleton",
+	"skeleton_origin:stray",
+	"skeleton_origin:wither"
+  ]
+}

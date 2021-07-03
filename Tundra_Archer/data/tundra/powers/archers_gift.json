@@ -1,0 +1,14 @@
+{
+	"type": "origins:modify_projectile_damage",
+	"damage_condition": {
+		"type": "origins:projectile",
+		"projectile": "minecraft:arrow"
+	},
+	"modifier": {
+		"operation": "multiply_base",
+		"value": 0.3,
+		"name": "more arrow damage"
+	},
+	"name": "Archer's Gift",
+	"description": "You deal extra damage with a bow."
+}

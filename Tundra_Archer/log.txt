@@ -1,0 +1,26 @@
+https://discord.com/channels/734127708488859831/798545973554315304/849322327585718312
+
+Tundra Archer
+
++ Archer's Gift: You deal 30% more ranged damage.
++ Sharp Eyes: You get permanent night vision.
++ Markings: Anything you shoot gets the glowing effect, without using Spectral Arrows.
++ Agility: You have permanent speed 1.
++ Camouflage: Pressing your primary will make you invisible for 15 seconds, but gives you slowness 2 for 25 seconds. Cooldown of 1 minute.
+
+- Archer's Curse: Using normal weapons are slower.
+- Charred: Fire deals 50% more damage.
+- Uninsulated: Being in a hot place (Nether, Desert, Red Desert, Terracotta biome) turns Speed 1 into Slowness 1.
+
+
+Unimplemented:
+- Tribal: You do not understand tipped arrows, and therefore cannot use them.
+
+
+
+
+
+
+
+
+

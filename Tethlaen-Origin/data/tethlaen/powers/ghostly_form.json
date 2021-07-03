@@ -1,0 +1,9 @@
+{
+    "type": "origins:model_color",
+    "red": 0.7,
+	"blue": 0.5,
+    "green": 0.5,
+    "alpha": 0.025,
+	"name": "Ghostly Form",
+	"description": "You are barely visible but can also barely interact with the world..."
+}

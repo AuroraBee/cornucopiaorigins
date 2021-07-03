@@ -1,0 +1,24 @@
+{
+  "name": "Join Skeleton",
+  "hidden": true,
+  "type": "origins:action_over_time",
+  "interval": 20,
+  "entity_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type":"origins:execute_command",
+        "command": "team add Skeleton",
+        "permission_level": 4
+      }, {
+        "type":"origins:execute_command",
+        "command": "team join Skeleton @p",
+        "permission_level": 4
+      }, {
+        "type": "origins:execute_command",
+        "command": "team join Skeleton @e[type=minecraft:skeleton]",
+        "permission_level": 4
+      }
+    ]
+  }
+}

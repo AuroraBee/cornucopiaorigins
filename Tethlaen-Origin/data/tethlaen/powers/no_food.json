@@ -1,0 +1,8 @@
+{
+  "type": "origins:prevent_item_use",
+  "item_condition": {
+    "type": "origins:food"
+  },
+  "name": "Antivore",
+  "description": "You are a ghost. You cannot. eat.",
+}

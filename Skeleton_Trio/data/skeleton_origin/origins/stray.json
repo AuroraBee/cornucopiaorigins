@@ -1,0 +1,51 @@
+{
+	"powers": [
+		"skeleton_origin:fatiguing_arrows",
+		"skeleton_origin:unnatural_traction",
+		"skeleton_origin:need_for_cold",
+		"skeleton_origin:hate_of_light",
+		"skeleton_origin:melting",
+		"skeleton_origin:thawing",
+		"skeleton_origin:volley_stray",
+		"skeleton_origin:fire_hurts",
+		"skeleton_origin:sounds_stray",
+		"skeleton_origin:stray_primary",
+		"skeleton_origin:stray_immunity",
+		"skeleton_origin:weapons_limit",
+		"skeleton_origin:underground",
+		"skeleton_origin:spawn_in_igloo",
+		"skeleton_origin:archer",
+		"skeleton_origin:create_arrow",
+		"skeleton_origin:create_bow",
+		"skeleton_origin:fragile",
+		"skeleton_origin:join_stray",
+		"skeleton_origin:life_steal",
+		"skeleton_origin:no_food",
+		"skeleton_origin:stray_skin",
+		"skeleton_origin:undead",
+		"skeleton_origin:undead_lungs",
+		"skeleton_origin:undead_vigor",
+		"skeleton_origin:hostile",
+		"skeleton_origin:wolf_angry",
+		"skeleton_origin:slower_regen",
+		"skeleton_origin:reset"
+	],
+	"icon": "minecraft:packed_ice",
+	"order": 10,
+	"impact": 3,
+	"name": "Stray",
+	"unchoosable": true,
+	"description": "You were a skeleton, but froze in the polar wilds!",
+	"upgrades": [
+		{
+			"condition": "skeleton_origin:burned",
+			"origin": "skeleton_origin:wither",
+			"announcement": "You feel your bones start to burn... \nYou feel yourself become stronger..."
+		},
+		{
+			"condition": "skeleton_origin:thawed",
+			"origin": "skeleton_origin:skeleton",
+			"announcement": "You feel your bones start to thaw... \nYou feel... normal again..."
+		}
+	]
+}

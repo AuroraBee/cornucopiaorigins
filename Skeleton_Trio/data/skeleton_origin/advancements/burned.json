@@ -1,0 +1,40 @@
+{
+    "display": {
+        "title": {
+            "text": "Flakeing Spines",
+            "color": "red"
+        },
+        "description": {
+            "text": "Enter a Nether Fortress and watch your spines start to burn...",
+            "color": "red"
+        },
+        "icon": {
+            "item": "minecraft:netherrack"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+		"lava": {
+            "trigger": "minecraft:enter_block",
+            "conditions": {
+                "block": "minecraft:lava"
+            }
+        },
+        "Fortress": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "dimension": "the_nether",
+                "feature": "fortress"
+            }
+        }
+    },
+    "rewards": {
+        "experience": 20
+    },
+    "parent": "skeleton_origin:root"
+}

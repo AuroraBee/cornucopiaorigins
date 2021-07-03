@@ -1,0 +1,8 @@
+{
+  "name": "Spawn in a Igloo",
+  "description": "You spawn in a igloo.",
+  "type": "origins:modify_player_spawn",
+  "dimension": "minecraft:overworld",
+  "structure": "minecraft:igloo",
+  "spawn_strategy": "center"
+}

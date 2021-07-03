@@ -1,0 +1,288 @@
+
+{
+    "type": "origins:multiple",
+    "ascend":
+    {
+        "type": "origins:active_self",
+        "entity_action":
+        {
+            "type": "origins:if_else",
+            "condition":
+            {
+                "type": "origins:resource",
+                "resource": "*:flight_resource",
+                "comparison": "==",
+                "compare_to": 1
+            },
+            "else_action":
+            {
+                "type": "origins:damage",
+                "amount": 0,
+                "source":
+                {
+                    "name": "null",
+                    "bypasses_armor": true
+                }
+            },
+            "if_action":
+            {
+                "type": "origins:change_resource",
+                "resource": "*:flight_up_resource",
+                "change": 4
+            }
+        },
+        "cooldown": 0,
+        "hud_render":
+        {
+            "should_render": false
+        },
+        "key":
+        {
+            "key": "key.jump",
+            "continuous": true
+        }
+    },
+    "descend":
+    {
+        "type": "origins:active_self",
+        "entity_action":
+        {
+            "type": "origins:change_resource",
+            "resource": "*:flight_down_resource",
+            "change": 4
+        },
+        "cooldown": 0,
+        "hud_render":
+        {
+            "should_render": false
+        },
+        "key":
+        {
+            "key": "key.sneak",
+            "continuous": true
+        }
+    },
+    "float":
+    {
+        "type": "origins:action_over_time",
+        "entity_action":
+        {
+            "type": "origins:if_else",
+            "condition":
+            {
+                "type": "origins:resource",
+                "resource": "*:flight_up_resource",
+                "comparison": "!=",
+                "compare_to": 0
+            },
+            "if_action":
+            {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:apply_effect",
+                        "effect":
+                        {
+                            "effect": "minecraft:levitation",
+                            "duration": 2,
+                            "amplifier": 3,
+                            "show_particles": false,
+                            "show_icon": false
+                        }
+                    }
+                ]
+            },
+            "else_action":
+            {
+                "type": "origins:if_else",
+                "condition":
+                {
+                    "type": "origins:resource",
+                    "resource": "*:flight_down_resource",
+                    "comparison": "!=",
+                    "compare_to": 0
+                },
+                "if_action":
+                {
+                    "type": "origins:if_else",
+                    "condition":
+                    {
+                        "type": "origins:status_effect",
+                        "effect": "minecraft:levitation",
+                        "min_amplifier": -1
+                    },
+                    "if_action":
+                    {
+                        "type": "origins:clear_effect",
+                        "effect": "minecraft:levitation"
+                    },
+                    "else_action":
+                    {
+                        "type": "origins:apply_effect",
+                        "effect":
+                        {
+                            "effect": "minecraft:levitation",
+                            "duration": 2,
+                            "amplifier": -8,
+                            "show_particles": false,
+                            "show_icon": false
+                        }
+                    }
+                },
+                "else_action":
+                {
+                    "type": "origins:apply_effect",
+                    "effect":
+                    {
+                        "effect": "minecraft:levitation",
+                        "duration": 15,
+                        "amplifier": -1,
+                        "show_particles": false,
+                        "show_icon": false
+                    }
+                }
+            }
+        },
+        "condition":
+        {
+            "type": "origins:resource",
+            "resource": "*:flight_resource",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "interval": 1
+    },
+    "down_resource":
+    {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 2,
+        "start_value": 0,
+        "hud_render":
+        {
+            "should_render": false
+        }
+    },
+    "up_resource":
+    {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 2,
+        "start_value": 0,
+        "hud_render":
+        {
+            "should_render": false
+        }
+    },
+    "resource":
+    {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 0,
+        "hud_render":
+        {
+            "should_render": false
+        }
+    },
+    "toggle":
+    {
+        "type": "origins:active_self",
+        "entity_action":
+        {
+            "type": "origins:if_else",
+            "condition":
+            {
+                "type": "origins:resource",
+                "resource": "*:flight_resource",
+                "comparison": "==",
+                "compare_to": 1
+            },
+            "if_action":
+            {
+                "type": "origins:change_resource",
+                "resource": "*:flight_resource",
+                "change": -1
+            },
+            "else_action":
+            {
+                "type": "origins:change_resource",
+                "resource": "*:flight_resource",
+                "change": 1
+            }
+        },
+        "key":
+        {
+            "key": "key.playerlist"
+        },
+        "cooldown": 0,
+        "hud_render":
+        {
+            "should_render": false,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 5
+        }
+    },
+    "swim":
+    {
+        "type": "origins:swimming",
+        "condition":
+        {
+            "type": "origins:resource",
+            "resource": "*:flight_resource",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+    "speed":
+    {
+        "type": "origins:modify_swim_speed",
+        "modifier":
+        {
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "trail":
+    {
+        "type": "origins:action_over_time",
+        "entity_action":
+        {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:smoke ~ ~-0.2 ~ 0.2 0.1 0.2 0 1 normal",
+            "permission_level": 4
+        },
+        "interval": 2,
+        "condition":
+        {
+            "type": "origins:resource",
+            "resource": "*:flight_resource",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+    "drain1":
+    {
+        "type": "origins:action_over_time",
+        "entity_action":
+        {
+            "type": "origins:change_resource",
+            "resource": "*:flight_up_resource",
+            "change": -1
+        },
+        "interval": 1
+    },
+    "drain2":
+    {
+        "type": "origins:action_over_time",
+        "entity_action":
+        {
+            "type": "origins:change_resource",
+            "resource": "*:flight_down_resource",
+            "change": -1
+        },
+        "interval": 1
+    },
+    "name": "Flight",
+    "description": "You have the ability to fly! Use space to float up, shift to float down and sprint to swim through the air. Use your Secondary Key to toggle flight."
+}

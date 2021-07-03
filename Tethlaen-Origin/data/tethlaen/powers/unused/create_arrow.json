@@ -1,0 +1,15 @@
+{
+	"type": "origins:action_over_time",
+	"entity_action": {
+  		"type": "origins:execute_command",
+ 		"command": "give @s minecraft:arrow 8",
+		"permission_level": 4
+	},
+	"interval": 4000,
+	"hud_render": {
+		"should_render": false,
+		"bar_index": 5
+	},
+	"name": "Refilling quiver",
+	"description": "You passively gain arrows over time."
+}

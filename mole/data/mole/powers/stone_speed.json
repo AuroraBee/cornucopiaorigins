@@ -1,0 +1,84 @@
+{
+	"type": "origins:stacking_status_effect",
+	"min_stacks": 0,
+	"max_stacks": 1,
+	"duration_per_stack": 20,
+	"effect":
+	{
+		"effect": "minecraft:speed",
+		"show_particles": false
+	},
+	"condition":
+	{
+		"type": "origins:or",
+		"conditions":
+		[
+			{
+				"type": "origins:on_block",
+				"block_condition":
+				{
+					"type": "origins:block",
+					"block": "minecraft:stone"
+				}
+			},
+			{
+				"type": "origins:on_block",
+				"block_condition":
+				{
+					"type": "origins:block",
+					"block": "minecraft:andesite"
+				}
+			},
+			{
+				"type": "origins:on_block",
+				"block_condition":
+				{
+					"type": "origins:block",
+					"block": "minecraft:granite"
+				}
+			},
+			{
+				"type": "origins:on_block",
+				"block_condition":
+				{
+					"type": "origins:block",
+					"block": "minecraft:diorite"
+				}
+			},
+			{
+				"type": "origins:on_block",
+				"block_condition":
+				{
+					"type": "origins:block",
+					"block": "minecraft:coal_ore"
+				}
+			},
+			{
+				"type": "origins:on_block",
+				"block_condition":
+				{
+					"type": "origins:block",
+					"block": "minecraft:iron_ore"
+				}
+			},
+			{
+				"type": "origins:on_block",
+				"block_condition":
+				{
+					"type": "origins:block",
+					"block": "minecraft:gold_ore"
+				}
+			},
+			{
+				"type": "origins:on_block",
+				"block_condition":
+				{
+					"type": "origins:block",
+					"block": "minecraft:diamond_ore"
+				}
+			}
+		]
+	},
+	"name": "Stone Speed",
+	"description": "You are faster when on Stone."
+}

@@ -1,0 +1,33 @@
+{
+	"powers": [
+		"tethlaen:flight",
+		"tethlaen:particles",
+		"tethlaen:withering_aura",
+		"tethlaen:explosion_immunity",
+		"tethlaen:explosion_player_immunity",
+		"tethlaen:fall_immunity",
+		"tethlaen:wither_immunity",
+		"tethlaen:primary",
+		"tethlaen:primary_sneak",
+		"tethlaen:secondary",
+		"tethlaen:secondary_sneak",
+		"tethlaen:soundstop",
+		"tethlaen:shadows",
+		"tethlaen:undead",
+		"tethlaen:undead_lungs",
+		"tethlaen:undead_vigor",
+		"tethlaen:no_food",
+		"tethlaen:tough",
+		"tethlaen:timed_phasing",
+		"tethlaen:no_armor",
+		"tethlaen:armor",
+		"tethlaen:sturdy",
+		"tethlaen:weapons_limit",
+		"tethlaen:ghostly_form"
+	],
+	"icon": "minecraft:tnt",
+	"order": 10,
+	"impact": 3,
+	"name": "Tethlaen",
+	"description": "You are the Spectre of Tethlaen, the Spirit of the dragon which resided in the mountain of holes, destruction incarnate."
+}

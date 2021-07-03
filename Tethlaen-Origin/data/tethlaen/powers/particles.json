@@ -1,0 +1,26 @@
+{
+  "name": "Particles Two: Electric Boogaloo!",
+  "hidden": true,
+  "type": "origins:action_over_time",
+  "interval": 45,
+  "entity_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type":"origins:execute_command",
+        "command": "particle minecraft:falling_obsidian_tear ~ ~1.25 ~ 0 0 0 2 1 force",
+        "permission_level": 4
+      },
+	  {
+        "type":"origins:execute_command",
+        "command": "execute at @e[type=!item,distance=0.1..25] run particle minecraft:smoke ~ ~0.2 ~ 0 0 0 0.5 0.75 normal",
+        "permission_level": 4
+      },
+	  {
+        "type":"origins:execute_command",
+        "command": "effect give @s mining_fatigue 30 2 true",
+        "permission_level": 4
+      }
+    ]
+  }
+}

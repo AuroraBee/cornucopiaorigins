@@ -1,0 +1,16 @@
+{
+  "type": "origins:starting_equipment",
+  
+  "name": "Starting Equipment",
+  "description": "You start with a bow and a bunch of arrows.",
+  
+  "stacks": [
+    {
+      "item": "minecraft:bow"
+    },
+    {
+      "item": "minecraft:arrow",
+      "amount": 128
+    }
+  ]
+}

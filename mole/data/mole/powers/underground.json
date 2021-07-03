@@ -1,0 +1,79 @@
+{
+	"type": "origins:multiple",
+	"name": "Underground Familiarity",
+	"description": "Your eyes are fit for the dark, granting you permanent night vision, but not for the light of the sun, making you slower and weaker when exposed to it. Additionally, you are less hungry while underground.",
+
+	"night_vision": {
+		"type": "origins:stacking_status_effect",
+		"min_stacks": 1,
+		"max_stacks": 1,
+		"duration_per_stack": 240,
+		"effects": [
+			{
+				"effect": "minecraft:night_vision",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false
+			},
+			{
+				"effect": "minecraft:haste",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false,
+				"amplifier": 2
+			}
+		],
+		"condition": {
+			"type": "origins:exposed_to_sun",
+			"inverted": true
+		}
+	},
+
+	"sunlight_aversion": {
+		"type": "origins:stacking_status_effect",
+		"min_stacks": 0,
+		"max_stacks": 1,
+		"duration_per_stack": 40,
+		"effects": [
+			{
+				"effect": "minecraft:slowness",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": true,
+				"duration": 120,
+				"amplifier": 2
+			},
+			{
+				"effect": "minecraft:blindness",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": true,
+				"duration": 600
+			},
+			{
+				"effect": "minecraft:weakness",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": true,
+				"duration": 80,
+				"amplifier": 1
+			}
+		],
+		"condition": {
+			"type": "origins:exposed_to_sun"
+		}
+	},
+
+	"reduced_exhaustion": {
+		"type": "origins:modify_exhaustion",
+		"modifier": {
+			"name": "Underground Familiarity exhaustion reduction",
+			"operation": "multiply_total",
+			"value": -0.5
+		},
+		"condition": {
+			"type": "origins:exposed_to_sky",
+			"inverted": true
+		}
+	}
+}

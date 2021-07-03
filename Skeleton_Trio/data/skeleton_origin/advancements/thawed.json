@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Thawed",
+            "color": "red"
+        },
+        "description": {
+            "text": "You are no longer frozen."
+        },
+        "icon": {
+            "item": "minecraft:lava_bucket"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "fire": {
+            "trigger": "minecraft:enter_block",
+            "conditions": {
+                "block": "minecraft:fire"
+            }
+        }
+    },
+    "rewards": {
+        "experience": 20
+    },
+    "parent": "skeleton_origin:root"
+}

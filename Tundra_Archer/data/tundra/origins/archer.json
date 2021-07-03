@@ -1,0 +1,21 @@
+{
+	"powers": [
+		"tundra:archers_gift",
+		"tundra:camo",
+		"tundra:cold_skin",
+		"tundra:extra_fire_dmg",
+		"tundra:give_speed",
+		"tundra:give_slow",
+		"tundra:markings",
+		"tundra:weapons_limit",
+		"tundra:starting_items",
+		"tundra:spawn_in_igloo",
+		"tundra:sounds"
+	],
+	"icon": "minecraft:bow",
+	"order": 10,
+	"impact": 2,
+	"name": "Tundra Archer",
+	"unchoosable": false,
+	"description": "You are a Huntsman living in the snowy Tundra!"
+}

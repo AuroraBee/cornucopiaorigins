@@ -1,0 +1,35 @@
+{
+  "name": "Agility",
+  "description": "You have permanent speed 1.",
+  "type": "origins:action_over_time",
+  "interval": 20,
+  "entity_action": {
+    "type": "origins:and",
+    "actions": [
+	  {
+        "type":"origins:execute_command",
+        "command": "effect give @s minecraft:nightvision 8 0 true",
+        "permission_level": 4
+      },
+	  {
+        "type":"origins:execute_command",
+        "command": "effect give @s minecraft:speed 4 0 true",
+        "permission_level": 4
+      }
+    ]
+  },
+  "condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:biome",
+				"condition": {
+					"type": "origins:temperature",
+					"comparison": ">=",
+					"compare_to": 1.0,
+					"inverted": true
+				}
+			}
+		]
+	}
+}

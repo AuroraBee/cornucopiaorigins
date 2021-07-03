@@ -1,0 +1,32 @@
+Added Primary and Secondary abilities to every skeleton type:
+
+Skeleton:
+Primary - Shoot 30 arrows roughly in the direction you are looking.
+Secondary - Summon Evoker Fangs on everything near you.
+
+Stray:
+Primary - Shoot 30 tipped slowness 2 + mining fatigue 1 arrows in the direction you are looking.
+Secondary - Freeze everything in a 10 block radius to a standstill.
+
+Witherskeleton:
+Primary - Shoot 200 short lived wither skulls forwards. (yes, this is balanced.)
+Secondary - Harm yourself and create a cloud of withering dust. (inflicts blindness on players.)
+
+
+Changes:
+Witherskeleton is now immune to Wither and Blindness.
+Witherskeleton now has natural armor and armor toughness.
+Witherskeletons sword buff has been nerfed from +4 to +2.5 extra damage.
+(Im not making the witherskeleton taller, i dont like adding dependencies.)
+
+Strays now get hurt while holding or standing near torches.
+Strays are immune to slowness and mining fatigue.
+
+
+
+To turn into a stray, enter a ice spikes biome and enter a river or other water source.
+To turn into a wither skeleton, fall into lava while inside a nether fortress.
+
+To revert to a skeleton do the following:
+ - as a Witherskeleton enter a frozen river.
+ - as a Stray walk into fire.

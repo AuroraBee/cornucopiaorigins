@@ -1,0 +1,12 @@
+{
+	"powers": [
+		"mole:stone_speed",
+		"mole:underground",
+		"mole:weapons_limit"
+	],
+	"icon": "minecraft:stone",
+	"order": 10,
+	"impact": 2,
+	"name": "Mole",
+	"description": "You are a mole: stay underground and out of the sun."
+}

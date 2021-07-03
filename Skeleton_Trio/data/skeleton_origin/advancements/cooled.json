@@ -1,0 +1,38 @@
+{
+    "display": {
+        "title": {
+            "text": "Cooled",
+            "color": "blue"
+        },
+        "description": {
+            "text": "You are no longer burning."
+        },
+        "icon": {
+            "item": "minecraft:water_bucket"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "water": {
+            "trigger": "minecraft:enter_block",
+            "conditions": {
+                "block": "minecraft:water"
+            }
+        },
+        "frozen river": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "biome": "minecraft:frozen_river"
+            }
+        }
+    },
+    "rewards": {
+        "experience": 20
+    },
+    "parent": "skeleton_origin:root"
+}

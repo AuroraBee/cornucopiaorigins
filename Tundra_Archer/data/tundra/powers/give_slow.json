@@ -1,0 +1,42 @@
+{
+  "name": "Uninsulated",
+  "description": "Being in a hot place turns Speed 1 into Slowness 1.",
+  "type": "origins:action_over_time",
+  "interval": 20,
+  "entity_action": {
+    "type": "origins:and",
+    "actions": [
+	  {
+        "type":"origins:execute_command",
+        "command": "effect give @s minecraft:slowness 4 0 true",
+        "permission_level": 4
+      },
+	  {
+        "type":"origins:execute_command",
+        "command": "effect clear @s minecraft:speed",
+        "permission_level": 4
+      }
+    ]
+  },
+  "condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:biome",
+				"condition": {
+					"type": "origins:temperature",
+					"comparison": ">=",
+					"compare_to": 1.0,
+				}
+			},
+			{
+				"type": "origins:in_block",
+				"block_condition": {
+					"type": "origins:block",
+					"block": "minecraft:nether_portal",
+					"inverted": true
+				}
+			}
+		]
+	}
+}

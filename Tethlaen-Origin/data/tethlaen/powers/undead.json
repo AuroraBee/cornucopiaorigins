@@ -1,0 +1,6 @@
+{
+	"type": "origins:entity_group",
+	"group": "undead",
+	"name": "Undead",
+	"description": "You are undead: smite effects do extra damage, harm heals, and you don't need to breathe."
+}

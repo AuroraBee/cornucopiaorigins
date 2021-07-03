@@ -1,0 +1,25 @@
+{
+	"type": "origins:target_action_on_hit",
+	"entity_action":
+	{
+		"type": "origins:apply_effect",
+		"effect":
+		{
+			"effect": "minecraft:slowness",
+			"duration": 200
+		}
+	},
+	"cooldown": 100,
+	"damage_condition":
+	{
+		"type": "origins:name",
+		"name": "arrow"
+	},
+	"hud_render":
+	{
+		"should_render": true,
+		"bar_index": 5
+	},
+	"name": "Fatiguing Arrows",
+	"description": "You channel the cold essence off of your body into the arrows you shoot, causing their target to be slowed."
+}

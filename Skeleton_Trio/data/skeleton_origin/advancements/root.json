@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Frozen Spines",
+            "color": "blue"
+        },
+        "description": {
+            "text": "Enter the ice spikes biome and feels your bone freeze.",
+            "color": "blue"
+        },
+        "icon": {
+            "item": "minecraft:packed_ice"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true,
+        "show_toast": false,
+        "announce_to_chat": false,
+        "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+    },
+    "criteria": {
+		"water": {
+            "trigger": "minecraft:enter_block",
+            "conditions": {
+                "block": "minecraft:water"
+            }
+        },
+        "Ice Spires": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "biome": "minecraft:ice_spikes"
+            }
+        }
+    },
+    "rewards": {
+        "experience": 20
+    }
+}
