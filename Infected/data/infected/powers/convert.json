@@ -1,0 +1,254 @@
+{
+	"type": "origins:multiple",
+	"name": "Infection",
+	"description": "Spread the Infection and build a humongous army of zombies",
+	"infect": {
+		"type": "origins:target_action_on_hit",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "power grant @s infected:converted"
+		},
+		"cooldown": 100,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+			"bar_index": 21
+		},
+		"target_condition": {
+			"type": "origins:and",
+			"conditions": [{
+					"type": "origins:entity_type",
+					"entity_type": "minecraft:husk",
+					"inverted": true
+				},
+				{
+					"type": "origins:power",
+					"power": "infected:converted",
+					"inverted": true
+				},
+				{
+					"type": "origins:power",
+					"power": "infected:convert",
+					"inverted": true
+				}
+			]
+		},
+		"damage_condition": {
+			"type": "origins:attacker",
+			"entity_condition": {
+				"type": "origins:power",
+				"power": "infected:convert"
+			}
+		}
+	},
+	"zombie_team": {
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [{
+					"type": "origins:execute_command",
+					"command": "team join infected @e[type=zombie]"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "team join infected @e[type=zombie_villager]"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "team join infected @e[type=husk]"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "team join infected"
+				}
+			]
+		}
+	},
+	"infection_immunity": {
+		"type": "origins:action_over_time",
+		"interval": 2,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [{
+					"type": "origins:execute_command",
+					"command": "power revoke @s infected:converted"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "tellraw @s \"You have been infected but are immune!\""
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "team join infected"
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:power",
+			"power": "infected:converted"
+		}
+	},
+	"infecting_breath": {
+		"type": "origins:action_over_time",
+		"interval": 80,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "execute as @e[type=!item,limit=15,sort=nearest,distance=1..2] unless entity @s[team=infected] run power grant @s infected:converted"
+		}
+	},
+	"sunburn": {
+		"type": "origins:burn",
+		"interval": 20,
+		"burn_duration": 6,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+                {
+					"type": "origins:exposed_to_sun"
+				},
+				{
+					"type": "origins:invisible",
+					"inverted": true
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "head",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "minecraft:leather_helmet"
+						}
+					},
+					"inverted": true
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "head",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "minecraft:golden_helmet"
+						}
+					},
+					"inverted": true
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "head",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "minecraft:iron_helmet"
+						}
+					},
+					"inverted": true
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "head",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "minecraft:diamond_helmet"
+						}
+					},
+					"inverted": true
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "head",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "minecraft:netherite_helmet"
+						}
+					},
+					"inverted": true
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "head",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "minecraft:turtle_helmet"
+						}
+					},
+					"inverted": true
+				}
+			]
+		}
+	},
+	"teams": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:execute_command",
+			"command": "team add infected"
+		},
+		"entity_action_added": {
+			"type": "origins:execute_command",
+			"command": "team join infected"
+		},
+		"entity_action_respawn": {
+			"type": "origins:execute_command",
+			"command": "team join infected"
+		},
+		"entity_action_removed": {
+			"type": "origins:execute_command",
+			"command": "team leave @s"
+		}
+	},
+	"death": {
+		"type": "origins:prevent_death",
+		"damage_condition": {
+			"type": "origins:fire",
+			"inverted": true
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [{
+					"type": "origins:execute_command",
+					"command": "function infected:husk"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "power grant @e[type=husk,limit=1,sort=nearest] infected:converted"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "power grant @e[limit=5,sort=random,distance=5..25,type=player,type=zombie,type=husk,type=zombie_villager,type=silverfish] infected:converted"
+				},
+				{
+					"type": "origins:set_on_fire",
+					"duration": 2
+				},
+				{
+					"type": "origins:damage",
+					"amount": 420,
+					"source": {
+						"name": "onFire",
+						"fire": true,
+						"unblockable": true,
+						"bypasses_armor": true
+					}
+				}
+			]
+		}
+	},
+	"vision": {
+		"type": "origins:night_vision",
+		"strength": 0.75,
+		"condition": {
+			"type": "origins:on_fire",
+			"inverted": true
+		}
+	},
+	"skin": {
+		"type": "origins:model_color",
+		"red": 0.5,
+		"green": 1.0,
+		"blue": 0.5,
+		"alpha": 1.0
+	}
+}

@@ -1,0 +1,6 @@
+{
+  "pack": {
+    "pack_format": 6,
+    "description": "A Origin which can copy all others. (Edit powers/copy.json and function/grant_powers.mcfunction for other Origins)"
+  }
+}

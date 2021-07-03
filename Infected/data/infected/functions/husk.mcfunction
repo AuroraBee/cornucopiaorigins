@@ -1,0 +1,1 @@
+summon minecraft:husk ~ ~ ~ {CanPickUpLoot:1b,Health:35,Attributes:[{Name:"generic.maxHealth",Base:35},{Name:"generic.followRange",Base:64},{Name:"generic.movementSpeed",Base:0.4f},{Name:"generic.attackDamage",Base:16}],CanBreakDoors:1,Team:infected}

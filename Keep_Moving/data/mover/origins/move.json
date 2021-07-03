@@ -1,0 +1,11 @@
+{
+	"powers": [
+		"mover:moving",
+		"mover:convert"
+	],
+	"icon": "minecraft:sugar",
+	"order": 10,
+	"impact": 3,
+	"name": "Mover",
+	"description": "KEEP MOVING!"
+}

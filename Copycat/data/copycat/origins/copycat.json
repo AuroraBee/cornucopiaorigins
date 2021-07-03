@@ -1,0 +1,10 @@
+{
+	"powers": [
+		"copycat:copy"
+	],
+	"icon": "minecraft:command_block",
+	"order": 10,
+	"impact": 3,
+	"name": "Copycat",
+	"description": "You can copy other peoples origins"
+}

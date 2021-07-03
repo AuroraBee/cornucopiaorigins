@@ -1,0 +1,1 @@
+execute as @s at @s unless predicate infected:iszombie run summon minecraft:zombie ~ ~ ~ {CanPickUpLoot:1b,Health:15,Attributes:[{Name:"generic.maxHealth",Base:15},{Name:"generic.followRange",Base:64},{Name:"generic.movementSpeed",Base:0.2f},{Name:"generic.attackDamage",Base:8}],CanBreakDoors:1,Team:infected}

@@ -1,0 +1,264 @@
+{
+	"type": "origins:multiple",
+	"name": "Move or Die!",
+	"description": "Keep moving or die trying!",
+	"particles": {
+		"type": "origins:particle",
+    	"particle": "minecraft:cloud",
+    	"frequency": 4
+	},
+	"speedometer": {
+		"type": "origins:resource",
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+			"bar_index": 9
+		},
+		"min": 0,
+		"max": 500,
+		"start_value": 400
+	},
+	"respawn": {
+		"type": "origins:action_on_callback",
+		"entity_action_respawned": {
+			"type": "origins:change_resource",
+			"resource": "*:*_speedometer",
+			"change": 400
+		}
+	},
+	"deteriorate": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_speedometer",
+			"change": -2
+		},
+		"interval": 1,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:climbing",
+					"inverted": true
+				},
+				{
+					"type": "origins:fall_flying",
+					"inverted": true
+				},
+				{
+					"type": "origins:moving",
+					"inverted": true
+				},
+				{
+					"type": "origins:sprinting",
+					"inverted": true
+				},
+				{
+					"type": "origins:swimming",
+					"inverted": true
+				}
+			]
+		}
+	},
+	"basic_movement_bonus": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_speedometer",
+			"change": 2
+		},
+		"interval": 1,
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:climbing"
+				},
+				{
+					"type": "origins:fall_flying"
+				},
+				{
+					"type": "origins:moving"
+				},
+				{
+					"type": "origins:sprinting"
+				},
+				{
+					"type": "origins:swimming"
+				}
+			]
+		}
+	},
+	"sneaking": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_speedometer",
+			"change": -1
+		},
+		"interval": 5,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:moving"
+				},
+				{
+					"type": "origins:sneaking"
+				}
+			]
+		}
+	},
+	"moving": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_speedometer",
+			"change": 1
+		},
+		"interval": 6,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:moving"
+				},
+				{
+					"type": "origins:sneaking",
+					"inverted": true
+				},
+				{
+					"type": "origins:sprinting",
+					"inverted": true
+				}
+			]
+		}
+	},
+	"sprinting": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_speedometer",
+			"change": 2
+		},
+		"interval": 2,
+		"condition": {
+			"type": "origins:sprinting"
+		}
+	},
+	"swimming": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_speedometer",
+			"change": 1
+		},
+		"interval": 4,
+		"condition": {
+			"type": "origins:swimming"
+		}
+	},
+	"climbing": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_speedometer",
+			"change": -1
+		},
+		"interval": 10,
+		"condition": {
+			"type": "origins:climbing"
+		}
+	},
+	"flying": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_speedometer",
+			"change": 1
+		},
+		"interval": 10,
+		"condition": {
+			"type": "origins:fall_flying"
+		}
+	},
+	"bonus": {
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effects": [
+				{
+					"effect": "minecraft:speed",
+					"amplifier": 1,
+					"duration": 30
+				},
+				{
+					"effect": "minecraft:strength",
+					"amplifier": 0,
+					"duration": 30
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_speedometer",
+			"comparison": ">=",
+			"compare_to": 495
+		}
+	},
+	"penalty": {
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effects": [
+				{
+					"effect": "minecraft:blindness",
+					"amplifier": 0,
+					"duration": 40
+				},
+				{
+					"effect": "minecraft:nausea",
+					"amplifier": 0,
+					"duration": 120
+				},
+				{
+					"effect": "minecraft:hunger",
+					"amplifier": 3,
+					"duration": 60
+				},
+				{
+					"effect": "minecraft:slowness",
+					"amplifier": 0,
+					"duration": 80
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_speedometer",
+			"comparison": "<=",
+			"compare_to": 20
+		}
+	},
+	"killing": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:damage",
+			"amount": 2,
+			"source": {
+				"name": "wither",
+				"unblockable": true,
+				"bypasses_armor": true
+			}
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_speedometer",
+			"comparison": "<=",
+			"compare_to": 2
+		}
+	}
+}

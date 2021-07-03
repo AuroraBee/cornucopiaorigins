@@ -1,0 +1,21 @@
+{
+    "type": "origins:target_action_on_hit",
+    "name": "Cursed",
+    "description": "Curse others by passing your own curse unto them!",
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "power grant @s mover:convert_moving"
+    },
+    "cooldown": 100,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+        "bar_index": 5
+    },
+    "damage_condition": {
+        "type": "origins:attacker",
+        "entity_condition": {
+            "type": "origins:sprinting"
+        }
+    }
+}

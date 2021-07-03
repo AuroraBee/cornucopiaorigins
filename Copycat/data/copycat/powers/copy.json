@@ -1,0 +1,995 @@
+{
+    "type": "origins:multiple",
+    "name": "Copying",
+    "description": "Copy other origins by killing a player/mob with a golden sword \nAvian: Parrot \nElytrian: Vex \nHuman: Villager \nMerling: Cod \nThe rest have their own corresponding mobs.",
+    "human_player": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:human"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_human_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_human_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Human\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:human",
+            "layer": "origins:origin"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "human_mob": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:human"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_human_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_human_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Human\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:entity_type",
+            "entity_type": "minecraft:villager"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "avian_player": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:avian"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_avian_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_avian_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Avian\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:avian",
+            "layer": "origins:origin"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "avian_mob": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:avian"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_avian_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_avian_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Avian\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:entity_type",
+            "entity_type": "minecraft:parrot"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "arachnid_player": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:arachnid"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_arachnid_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_arachnid_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Arachnid\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:arachnid",
+            "layer": "origins:origin"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "arachnid_mob": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:arachnid"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_arachnid_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_arachnid_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Arachnid\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:entity_type",
+            "entity_type": "minecraft:spider"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "elytrian_player": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:elytrian"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_elytrian_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_elytrian_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Elytrian\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:elytrian",
+            "layer": "origins:origin"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "elytrian_mob": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:elytrian"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_elytrian_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_elytrian_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Elytrian\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:entity_type",
+            "entity_type": "minecraft:vex"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "shulk_player": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:shulk"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_shulk_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_shulk_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Shulk\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:shulk",
+            "layer": "origins:origin"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "shulk_mob": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:shulk"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_shulk_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_shulk_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Shulk\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:entity_type",
+            "entity_type": "minecraft:shulker"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "feline_player": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:feline"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_feline_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_feline_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Feline\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:feline",
+            "layer": "origins:origin"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "feline_mob": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:feline"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_feline_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_feline_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Feline\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:entity_type",
+            "entity_type": "minecraft:ocelot"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "enderian_player": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:enderian"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_enderian_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_enderian_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Enderian\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:enderian",
+            "layer": "origins:origin"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "enderian_mob": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:enderian"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_enderian_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_enderian_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Enderian\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:entity_type",
+            "entity_type": "minecraft:enderman"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "merling_player": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:merling"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_merling_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_merling_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Merling\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:merling",
+            "layer": "origins:origin"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "merling_mob": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:merling"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_merling_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_merling_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Merling\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:entity_type",
+            "entity_type": "minecraft:cod"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "blazeborn_player": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:blazeborn"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_blazeborn_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_blazeborn_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Blazeborn\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:blazeborn",
+            "layer": "origins:origin"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "blazeborn_mob": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:blazeborn"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_blazeborn_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_blazeborn_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Blazeborn\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:entity_type",
+            "entity_type": "minecraft:blaze"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "phantom_player": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:phantom"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_phantom_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_phantom_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Phantom\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:phantom",
+            "layer": "origins:origin"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    },
+    "phantom_mob": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin origins:phantom"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function copycat:grant_powers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_phantom_mob"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s copycat:copy_phantom_player"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"You copied the origin: Phantom\""
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "target_condition": {
+            "type": "origins:entity_type",
+            "entity_type": "minecraft:phantom"
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_sword"
+                    }
+                }
+            }
+        }
+    }
+}

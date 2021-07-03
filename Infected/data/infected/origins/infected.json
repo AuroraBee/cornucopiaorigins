@@ -1,0 +1,10 @@
+{
+	"powers": [
+		"infected:convert"
+	],
+	"icon": "minecraft:zombie_head",
+	"order": 10,
+	"impact": 3,
+	"name": "Patient ZERO",
+	"description": "You have been infected by a dreadful plague and spread it simply by breathing...\nZombies are neutral to you."
+}
